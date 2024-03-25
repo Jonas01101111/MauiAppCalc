@@ -31,7 +31,8 @@
 
     <ContentPage.Content>
         <Grid RowDefinitions="150, *, *, *, *, *, *"
-              ColumnDefinitions="*, *, *, *">
+              ColumnDefinitions="*, *, *, *"
+              RowSpacing="10" ColumnSpacing="10" Margin="10">
             <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"
                      x:Name="visor" Text="0" HorizontalTextAlignment="End"
                      VerticalTextAlignment="End" TextColor="White"

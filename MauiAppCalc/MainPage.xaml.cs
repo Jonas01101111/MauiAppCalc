@@ -2,22 +2,40 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        string? operacao = null;
 
+        double memoria_calc_pre_operacao = 0;
+        double memoria_calc_pos_operacao = 0;
+
+        string para_aparecer_no_visor = "";
         public MainPage()
         {
             InitializeComponent();
         }
-
+        
+        private void remover_sinais_visor()
+        {
+            if (para_aparecer_no_visor == "+" ||
+                para_aparecer_no_visor == "-" ||
+                para_aparecer_no_visor == "*" ||
+                para_aparecer_no_visor == "/")
+            {
+                para_aparecer_no_visor = ""; 
+            }
+        }
 
         private void zerar_Clicked(object sender, EventArgs e)
         {
-
+            visor.Text = "0";
+            para_aparecer_no_visor = "";
+            memoria_calc_pre_operacao = 0;
+            memoria_calc_pos_operacao = 0;
+            operacao = null;
         }
 
         private void maismenos_Clicked(object sender, EventArgs e)
         {
-
+            double valor = Convert.ToDouble(visor.Text);
         }
 
         private void porcento_Clicked(object sender, EventArgs e)
