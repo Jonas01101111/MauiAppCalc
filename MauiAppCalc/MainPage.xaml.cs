@@ -46,15 +46,14 @@
             valor = valor / 100;
             visor.Text = valor.ToString();  
         }
-
-        private void dividir_Clicked(object sender, EventArgs e)
+	private void operation_Clicked(object sender, EventArgs e)
         {
-            memoria_calc_pre_operacao = Convert.ToDouble(visor.Text);
-            para_aparecer_no_visor = "/";
-            operacao = "/";
-            visor.Text = para_aparecer_no_visor;
+            	memoria_calc_pre_operacao = Convert.ToDouble(visor.Text);
+		Button disparador = (Button)sender;  
+		para_aparecer_no_visor = disparador.Text;
+            	operacao = disparador.Text;
+            	visor.Text = para_aparecer_no_visor;
         }
-
         private void num_Clicked(object sender, EventArgs e)//obs:da pra fazer numa funcao só| fazer isso dps
         {
             remover_sinais_visor();
@@ -62,30 +61,6 @@
 	        para_aparecer_no_visor += disparador.Text;
             visor.Text = para_aparecer_no_visor;
         }
-        private void multiplicar_Clicked(object sender, EventArgs e)
-        {
-            memoria_calc_pre_operacao = Convert.ToDouble(visor.Text);
-            para_aparecer_no_visor = "*";
-            operacao = "*";
-            visor.Text = para_aparecer_no_visor;
-        }
-
-        private void subtrair_Clicked(object sender, EventArgs e)
-        {
-            memoria_calc_pre_operacao = Convert.ToDouble(visor.Text);
-            para_aparecer_no_visor = "-";
-            operacao = "-";
-            visor.Text = para_aparecer_no_visor;
-        }
-        private void somar_Clicked(object sender, EventArgs e)
-        {
-            memoria_calc_pre_operacao = Convert.ToDouble(visor.Text);
-            para_aparecer_no_visor = "+";
-            operacao = "+";
-            visor.Text = para_aparecer_no_visor;
-        }
-        
-
         private void engual_Clicked(object sender, EventArgs e)
         {
             try 
@@ -122,11 +97,6 @@
             visor.Text = para_aparecer_no_visor;
         }
 
-        private void num0_Clicked(object sender, EventArgs e)
-        {
-            remover_sinais_visor();
-            para_aparecer_no_visor += num0.Text;
-            visor.Text = para_aparecer_no_visor;
         }
     }
 
