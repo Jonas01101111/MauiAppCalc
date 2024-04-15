@@ -78,7 +78,6 @@
                         resultado = memoria_calc_pre_operacao-memoria_calc_pos_operacao;
                         visor.Text = Convert.ToString(resultado);
                         break;
-
                     case "/":
                         resultado = memoria_calc_pre_operacao/memoria_calc_pos_operacao;
                         visor.Text = Convert.ToString(resultado);
